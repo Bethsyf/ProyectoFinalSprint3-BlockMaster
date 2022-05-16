@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import styled from 'styled-components';
 import { editMovieAsync } from '../actions/actionMovies';
 import { useForm } from '../hooks/useForm';
 
@@ -30,7 +29,7 @@ const Edit = ({datos, setModal}) => {
     }
         return (            
                 <>
-                    <Modal  show={show} onClick={handleClose}>
+                    <Modal  show={show} onHide={handleClose}>
                         <Modal.Header className='bg-dark' closeButton>
                             <Modal.Title className='text-warning'>Editar Pelicula</Modal.Title>
                         </Modal.Header>

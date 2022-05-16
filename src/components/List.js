@@ -21,8 +21,7 @@ const List = () => {
 
     return (
 
-        <div className="bg-transparent"
-        >
+        <div className="bg-transparent">
             <div className="row m-3" >
                 {
                     movies.map((p, index) => (
@@ -32,7 +31,7 @@ const List = () => {
                                     <img className="img-fluid rounded-start" alt='imagen peli' src={p.foto} width='150' />
                                 </div>
                                 <div className="col-sm ">
-                                    <div class="d-flex flex-column w-100 mb-3">
+                                    <div className="d-flex flex-column w-100 mb-3">
                                         <button type="button" className="btn btn-danger b-block m-1" onClick={() => dispatch(deletMovieAsync(p.titulo))}
                                         >Borrar</button>
 
