@@ -23,7 +23,6 @@ const Home = () => {
                         alt="First slide"
                         height="350px"
                     />
-
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -32,8 +31,6 @@ const Home = () => {
                         alt="Second slide"
                         height="350px"
                     />
-
-
                 </Carousel.Item>
                 <Carousel.Item>
                     <img

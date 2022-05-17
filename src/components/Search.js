@@ -25,29 +25,26 @@ const BtnSearch = styled.button`
 
 const Search = () => {
     const dispatch = useDispatch()
-
-    const formik = useFormik({
-        initialValues:{
-            search:''},
-        validationSchema: Yup.object({
-            search: Yup.string().required('campo requerido')
-        }),
-        onSubmit: ({search})=>{
-            console.log(search)
-            dispatch(searchMovieAsync(search))
+	const formik = useFormik({
+		initialValues: {
+			search: ''
+		},
+		validationSchema: Yup.object({
+			search: Yup.string().required('Campo Requerido')
+		}),
+		onSubmit: ({ search }) => {
+			console.log(search)
+			dispatch(searchMovieAsync(search))
         }
     })
 
     return (
         <div>
-            <center>
             <form className="d-flex" onSubmit={formik.handleSubmit}>
-                <SearchI name="search" placeholder="Busca tu película favorita" onChange={formik.handleChange}/>
+                <SearchI name="search" placeholder="Busca tu película favorita" onChange={formik.handleChange} />
                 <BtnSearch type="submit"><img src='https://res.cloudinary.com/dmaviub4l/image/upload/v1652360839/block-master/ubxxlrlnvigucaxkbj21.png' alt='lupa' />
-          </BtnSearch>
+                </BtnSearch>
             </form>
-            
-            </center>
         </div>
     );
 }

@@ -32,14 +32,14 @@ const StyledHeader = styled.header`
     background-color: black;    
 `
 
-const Navbar = () => {  
-  const dispatch = useDispatch();      
+const Navbar = () => {
+  const dispatch = useDispatch();
 
   return (
-    
+
     <StyledHeader>
       <nav className="navbar navbar-expand-lg navbar-dark ">
-      <div className="container-fluid">
+        <div className="container-fluid">
           <NavLink className="navbar-brand" to='/'>
             <Logo
               src={'https://res.cloudinary.com/dmaviub4l/image/upload/v1652359622/block-master/gnf1yvvxhz1wfh2vjrkc.png'}
@@ -47,61 +47,59 @@ const Navbar = () => {
               alt='Logo Block Master'
             />
           </NavLink>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <Menu>
-            <MenuItem>
-              <NavLink className="navbar-brand"
-                style={{
-                  color: 'white'
-                }}
-                to='/list'
-              >
-                Todas
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink
-                style={{
-                  color: 'white'
-                }}
-                to='/mas-valoradas'
-              >
-                Más valoradas
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink
-                style={{
-                  color: 'white'
-                }}
-                to='/menos-valoradas'
-              >
-                Menos valoradas
-              </NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink
-                style={{
-                  color: 'white'
-                }}
-                to='/add'
-              >
-                Agregar Película
-              </NavLink>
-            </MenuItem>
-          </Menu>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <Menu>
+              <MenuItem>
+                <NavLink className="navbar-brand"
+                  style={{
+                    color: 'white'
+                  }}
+                  to='/list'
+                >
+                  Todas
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  style={{
+                    color: 'white'
+                  }}
+                  to='/mas-valoradas'
+                >
+                  Más valoradas
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  style={{
+                    color: 'white'
+                  }}
+                  to='/menos-valoradas'
+                >
+                  Menos valoradas
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  style={{
+                    color: 'white'
+                  }}
+                  to='/add'
+                >
+                  Agregar Película
+                </NavLink>
+              </MenuItem>
+            </Menu>
           </div>
-          <Search />        
-          
-            <Nav.Link className="m-2" style={{
-                  color: 'gray', background:'yellow', fontWeight: 'bold', borderRadius: '10px'
-                }}
-                to='/add' onClick={()=>dispatch(logoutAsync()) }>Cerrar Sesión</Nav.Link>                        
-                
+          <Search />
+          <Nav.Link className="m-2" style={{
+            color: 'gray', background: 'yellow', fontWeight: 'bold', borderRadius: '10px'
+          }}
+            to='/add' onClick={() => dispatch(logoutAsync())}>Cerrar Sesión</Nav.Link>
         </div>
       </nav>
     </StyledHeader>
-    
+
   )
 }
 

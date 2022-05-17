@@ -117,7 +117,7 @@ export const searchMovieAsync = (tituloBuscar)=>{
 
         const q = query(collectionListar, where('titulo', '>=', tituloBuscar), where('titulo', '<=', tituloBuscar + '~'))
         const datosQ = await getDocs(q)
-
+        console.log(datosQ)
         const movie =[]
         datosQ.forEach((docu =>{
             movie.push(docu.data())
