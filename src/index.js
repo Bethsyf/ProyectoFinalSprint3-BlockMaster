@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import AppRouters from './routers/AppRouter';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode >
   <Provider store={store}>
     <AppRouters />
   </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
